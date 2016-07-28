@@ -80,4 +80,10 @@ class StringCalculator
         }
         return $t;
     }
+
+    public function addString($string)
+    {
+        preg_match_all('/-?[0-9]+(\.[0-9]+)?([Ee]\d+)?/', $string, $matches);
+        return array_sum($matches[0]);
+    }
 }

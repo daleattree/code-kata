@@ -42,6 +42,16 @@ class StringCalculatorTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $result);
     }
 
+    /**
+     * @dataProvider dataProvider
+     * @param $string
+     * @param $expected
+     */
+    public function testAddString($string, $expected){
+        $result = $this->calculator->addString($string);
+        $this->assertEquals($expected, $result);
+    }
+
     public function dataProvider()
     {
         return array(
